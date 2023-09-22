@@ -1,4 +1,5 @@
 'use strict';
 function searchBtnOnClick() {
-    console.log("Search button clicked!");
+    let location = document.getElementById("searchField");
+    console.log(location.value);
 }

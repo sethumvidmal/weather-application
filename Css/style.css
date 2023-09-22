@@ -17,23 +17,23 @@ body {
     margin-left: 80vw;
 }
 
-#search-input {
+#searchField {
     outline: none;
     border: none;
     background: none;
     padding: 5px;
 }
 
-#btn-search{
+#btn-search {
     border: none;
     background: none;
 }
+
 #search-icon {
     position: relative;
     transition-duration: 0.2s;
 }
 
-#search-icon:hover{
+#search-icon:hover {
     filter: drop-shadow(2px 2px 2px #222);
 }
-
