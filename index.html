@@ -11,11 +11,20 @@
 </head>
 
 <body>
-   <div id="search">
-      <input type="text" placeholder="Search location" id="searchField">
-      <button onclick="searchBtnOnClick()" id="btn-search"><img src="assets/icons/search-icon.png" width="19" height="24"
-            alt="" id="search-icon"></button>
+   <div>
+      <div id="searchBox">
+         <input type="text" placeholder="Search location" id="searchField">
+         <button onclick="searchBtnOnClick()" id="btn-search"><img src="assets/icons/search-icon.png" width="19"
+               height="24" alt="" id="search-icon"></button>
+      </div>
+      <div id="switchTheme">
+         <button id="btnDarkMode"><img src="assets/icons/dark-mode-icon.png" width="30" height="30"></button>
+      </div>
    </div>
+
+
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
    <script src="Js/script.js"></script>
 </body>
 

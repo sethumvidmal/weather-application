@@ -4,8 +4,8 @@ body {
     background-size: cover;
 }
 
-#search {
-    display: flex;
+#searchBox {
+    display: inline-block;
     align-items: center;
     justify-content: center;
     background-color: rgba(225, 225, 225, 0.492);
@@ -13,27 +13,37 @@ body {
     border-radius: 50px;
     border: 0px;
     box-shadow: 10px;
-    margin-top: 5px;
-    margin-left: 80vw;
+    margin-top: 1%;
+    margin-left: 77vw;
 }
 
 #searchField {
     outline: none;
     border: none;
     background: none;
-    padding: 5px;
+    padding: 2.4%;
+    margin-left: 5%;
 }
 
 #btn-search {
     border: none;
     background: none;
-}
-
-#search-icon {
-    position: relative;
     transition-duration: 0.2s;
 }
 
-#search-icon:hover {
+#btn-search:hover {
+    filter: drop-shadow(2px 2px 2px #222);
+}
+#switchTheme{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 2%;
+}
+#btnDarkMode{
+    border: none;
+    background: none;
+    transition-duration: 0.2s;
+}
+#btnDarkMode:hover{
     filter: drop-shadow(2px 2px 2px #222);
 }
