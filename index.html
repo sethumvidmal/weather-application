@@ -6,23 +6,136 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="Css/bootstrap.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
    <link rel="stylesheet" href="Css/style.css">
 </head>
-</head>
 
-<body>
-   <div>
-      <div id="searchBox">
-         <input type="text" placeholder="Search location" id="searchField">
-         <button onclick="searchBtnOnClick()" id="btn-search"><img src="assets/icons/search-icon.png" width="19"
-               height="24" alt="" id="search-icon"></button>
+<body onload="loadDefaultLocation()">
+   <div class="city-search-mode">
+      <div>
+         <label for="" class="lblLocation"></label>
       </div>
-      <div id="switchTheme">
-         <button id="btnDarkMode"><img src="assets/icons/dark-mode-icon.png" width="30" height="30"></button>
+      <div class="searchBox">
+         <input type="text" placeholder="Search location" class="searchField" id="searchField">
+         <button onclick="searchBtnOnClick()" class="btn-search"><i class="bi bi-search"></i></button>
+      </div>
+      <div class="switchTheme">
+         <button class="btnDarkMode" onclick="switchTheme()"><i class="bi bi-moon-fill"></i></button>
       </div>
    </div>
+   <div class="currentWeather">
+      <div class="icon"></div>
+      <div>
+         <label class="currentTemp"></label>
+         <label class="currentState">Mostly sunny</label>
+      </div>
+      <div class="verticalLine"></div>
+      <div class="tblContainer">
+         <table class="tblDetails">
+            <tr>
+               <td class="tblDetails">
+                  <label class="lblHumidity"></label><br>
+                  <label class="weatherStatus">Humidity</label>
+               </td>
+               <td class="tblDetails">
+                  <label class="lblWind"></label><br>
+                  <label class="weatherStatus">Wind</label>
+               </td>
+               <td class="tblDetails">
+                  <label class="lblPressure"></label><br>
+                  <label class="weatherStatus">Pressure in mili bar</label>
+               </td>
+            </tr>
+            <tr>
+               <td class="tblDetails">
+                  <label class="lblUv"></label><br>
+                  <label class="weatherStatus">UV Index</label>
+               </td>
+               <td class="tblDetails">
+                  <label class="lblCloudCover"></label><br>
+                  <label class="weatherStatus">Cloud cover</label>
+               </td>
+               <td class="tblDetails">
+                  <label class="lblPrecipitation"></label><br>
+                  <label class="weatherStatus">Precipitation in millimeters</label>
+               </td>
+            </tr>
+         </table>
+      </div>
+   </div>
+   <div>
+      <label for="" class="lblHistory">&nbsp;History</label>
+   </div>
+   <div class="historyDetailsContainer">
+      <!-- <div class="historyDetails">Day01</div>
+      <div class="historyDetails">Day01</div>
+      <div class="historyDetails">Day01</div> -->
+      <div class="card" style="width: 18rem;">
+         <img src="weather/64x64/day/176.png" class="card-img-top" alt="...">
+         <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
+         </div>
+      </div>
 
+      <div class="card" style="width: 18rem;">
+         <img src="weather/64x64/day/248.png" class="card-img-top" alt="...">
+         <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
+         </div>
+      </div>
 
+      <div class="card" style="width: 18rem;">
+         <img src="weather/64x64/day/365.png" class="card-img-top" alt="...">
+         <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
+         </div>
+      </div>
+   </div>
+   <div>
+      <label for="" class="lblFuture">&nbsp;Next 5 days</label>
+   </div>
+   <div class="nextDaysDetails">
+         <table class="tblFuture" >
+            <tr>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">Tue </label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">10℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">21℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">12mph</label></td>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">0%</label></td>
+            </tr>
+            <tr>
+               <td  class="second-table-td"><label for="" class="lblFutureDetals">Tue </label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">10℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">21℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">12mph</label></td>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">0%</label></td>
+            </tr>
+            <tr>
+               <td  class="second-table-td"><label for="" class="lblFutureDetals">Tue </label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">10℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">21℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">12mph</label></td>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">0%</label></td>
+            </tr>
+            <tr>
+               <td  class="second-table-td"><label for="" class="lblFutureDetals">Tue </label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">10℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">21℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">12mph</label></td>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">0%</label></td>
+            </tr>
+            <tr>
+               <td  class="second-table-td"><label for="" class="lblFutureDetals">Tue </label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">10℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">21℃</label></td>
+               <td class="second-table-td"> <label for="" class="lblFutureDetals">12mph</label></td>
+               <td class="second-table-td"><label for="" class="lblFutureDetals">0%</label></td>
+            </tr>
+         </table>
+   </div>
    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"></script>
    <script src="Js/script.js"></script>

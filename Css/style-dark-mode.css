@@ -2,16 +2,14 @@ body {
     background: url("../assets/peakpx.jpg");
     background-attachment: fixed;
     background-size: cover;
-
+    
 }
-
-.city-search-mode {
+.city-search-mode{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
 
-.lblLocation {
+}
+.lblLocation{
     color: rgb(255, 255, 255);
     font-family: cursive;
     font-weight: 600;
@@ -20,20 +18,25 @@ body {
 }
 
 .searchBox {
-    display: flex;
+    position: relative;
+    display: inline-block;
     align-items: center;
     justify-content: center;
+    background-color: rgba(225, 225, 225, 0.492);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
+    width: 16%;
+    border-radius: 50px;
+    border: 0px;
+    box-shadow: 10px;
+    margin-top: 1%;
+    margin-left: 70vw;
 }
 
 .searchField {
-    position: relative;
     outline: none;
     border: none;
-    border-radius: 50px;
-    background: rgba(225, 225, 225, 0.492);
+    background: none;
     padding: 2.4%;
-    padding-left: 15px;
-    padding-right: 15px;
     margin-left: 5%;
 }
 
@@ -41,47 +44,40 @@ body {
     border: none;
     background: none;
     transition-duration: 0.2s;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .btn-search:hover {
     filter: drop-shadow(2px 2px 2px #222);
 }
-
-.switchTheme {
+.switchTheme{
     display: inline-block;
     vertical-align: middle;
     margin-left: 2%;
 }
-
-.btnDarkMode {
+.btnDarkMode{
     position: relative;
     top: 40%;
     border: none;
     background: none;
     transition-duration: 0.2s;
 }
-
-.btnDarkMode:hover {
+.btnDarkMode:hover{
     filter: drop-shadow(2px 2px 2px #222);
 }
 
-.currentWeather {
+.currentWeather{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-
-.currentTemp {
+.currentTemp{
     font-family: cursive;
     font-weight: 1000;
     font-size: 3rem;
     color: rgb(99, 99, 99);
 }
-
-.currentState {
+.currentState{
     position: relative;
     bottom: -10vh;
     left: -15vh;
@@ -90,8 +86,7 @@ body {
     font-weight: 500;
     color: rgb(99, 99, 99);
 }
-
-.verticalLine {
+.verticalLine{
     position: relative;
     left: -12vh;
     width: .3vw;
@@ -100,42 +95,36 @@ body {
 
 }
 
-.tblDetails {
+.tblDetails{
     padding: 40px;
     color: rgb(99, 99, 99);
     font-size: 5vh;
     font-family: cursive;
     font-weight: 600;
 }
-
-.weatherStatus {
+.weatherStatus{
     font-size: large;
 }
-
-.tblContainer {
+.tblContainer{
     position: relative;
 }
-
-.tblContainer {
+.tblContainer{
     background-color: rgba(240, 248, 255, 0.516);
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
     border-radius: 30px;
 }
-
-.lblHistory {
+.lblHistory{
     font-family: cursive;
     font-weight: 1000;
     font-size: 150%;
     color: aliceblue;
 }
-
-.historyDetailsContainer {
+.historyDetailsContainer{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.historyDetails {
+.historyDetails{
     display: flex;
     justify-content: center;
     width: 18rem;
@@ -147,18 +136,13 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 }
-
-.lblFuture {
+.lblFuture{
     font-family: cursive;
     font-weight: 1000;
     font-size: 150%;
     color: aliceblue;
 }
-
-.nextDaysDetails {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.nextDaysDetails{
     margin-left: 5vw;
     width: 90vw;
     height: 80vh;
@@ -166,30 +150,9 @@ body {
     background-color: rgba(240, 248, 255, 0.516);
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
 }
-
-.card {
+.card{
     background-color: rgba(240, 248, 255, 0.516);
     margin-left: 15px;
     margin-right: 15px;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
-}
-
-.lblFutureDetals {
-    padding: 20px;
-    padding-right: 50px;
-    font-family: cursive;
-    font-size: larger;
-    color: rgb(99, 99, 99);
-}
-
-.tblFuture {
-    width: 90%;
-    height: 91%;
-    margin: 10px;
-
-}
-
-.second-table-td {
-    border-bottom: 3px solid rgb(255, 255, 255);
-    text-align: center;
 }
