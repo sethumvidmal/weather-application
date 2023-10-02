@@ -2,6 +2,8 @@
 function searchBtnOnClick() {
   let location = document.getElementById(`searchField`);
   currentWeather(location.value);
+  historyWeather(location.value);
+  forecastWeather(location.value);
 }
 function loadDefaultLocation() {
   currentWeather(`colombo`);
@@ -141,6 +143,4 @@ function forecastWeather(location) {
       document.querySelector('.raw3WindSpeed').innerHTML = data.forecast.forecastday[2].day.maxwind_mph + `mph`;
       document.querySelector('.raw3Humidity').innerHTML = data.forecast.forecastday[2].day.avghumidity + `%`;
     })
-
-
 }
