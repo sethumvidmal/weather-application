@@ -114,7 +114,6 @@ function forecastWeather(location) {
   fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       document.querySelector('.raw1MaxTemp').innerHTML = data.forecast.forecastday[0].day.maxtemp_c + `<sup> o</sup>C`;
       document.querySelector('.raw1Date').innerHTML = data.forecast.forecastday[0].date;
       document.querySelector('.raw1MinTemp').innerHTML = data.forecast.forecastday[0].day.mintemp_c + `<sup> o</sup>C`;
@@ -125,7 +124,6 @@ function forecastWeather(location) {
   fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       document.querySelector('.raw2MaxTemp').innerHTML = data.forecast.forecastday[1].day.maxtemp_c + `<sup> o</sup>C`;
       document.querySelector('.raw2Date').innerHTML = data.forecast.forecastday[1].date;
       document.querySelector('.raw2MinTemp').innerHTML = data.forecast.forecastday[1].day.mintemp_c + `<sup> o</sup>C`;
@@ -136,7 +134,6 @@ function forecastWeather(location) {
   fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       document.querySelector('.raw3MaxTemp').innerHTML = data.forecast.forecastday[2].day.maxtemp_c + `<sup> o</sup>C`;
       document.querySelector('.raw3Date').innerHTML = data.forecast.forecastday[2].date;
       document.querySelector('.raw3MinTemp').innerHTML = data.forecast.forecastday[2].day.mintemp_c + `<sup> o</sup>C`;
