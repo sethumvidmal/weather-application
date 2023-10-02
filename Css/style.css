@@ -193,3 +193,33 @@ body {
     border-bottom: 3px solid rgb(255, 255, 255);
     text-align: center;
 }
+.lblCard1{
+    font-family: cursive;
+    font-size: larger;
+    color: rgb(99, 99, 99);
+    font-weight: 600;
+}
+.lblCard2{
+    font-family: cursive;
+    font-size: larger;
+    color: rgb(99, 99, 99);
+    font-weight: 600;
+}
+.lblCard3{
+    font-family: cursive;
+    font-size: larger;
+    color: rgb(99, 99, 99);
+    font-weight: 600;
+}
+.historyTableDetails{
+    font-family: cursive;
+    font-size: large;
+    color: rgb(99, 99, 99);
+    font-weight: 300;
+}
+.textStyle{
+    font-family: cursive;
+    font-size: large;
+    color: rgb(99, 99, 99);
+    font-weight: 300; 
+}

@@ -5,13 +5,14 @@ function searchBtnOnClick() {
 }
 function loadDefaultLocation() {
   currentWeather(`colombo`);
+  historyWeather(`colombo`);
+  forecastWeather(`colombo`);
 };
 //input field value gose here
 function currentWeather(location) {
   fetch(`https://api.weatherapi.com/v1/current.json?q=${location}&key=be613ef740984fda9ae155111231909`)
     .then(res => res.json())
     .then(data => {
-      console.log(data);
       document.querySelector(`.currentTemp`).innerHTML = data.current.temp_c + `<sup>o</sup>C`;
       document.querySelector(`.currentState`).innerHTML = data.current.condition.text;
       document.querySelector(`.lblWind`).innerHTML = data.current.wind_mph + `mph`;
@@ -74,5 +75,72 @@ function formatDate(date) {
   return date
 }
 function historyWeather(location) {
-  let dateArray = [Last7Days.result0, Last7Days.result1, Last7Days.result2, Last7Days.result3, Last7Days.result4, Last7Days.result5];
+  let dateArray = [Last7Days().result1, Last7Days().result2, Last7Days().result3, Last7Days().result4, Last7Days().result5, Last7Days().result6, Last7Days().result7];
+
+  fetch(`https://api.weatherapi.com/v1/history.json?q=${location}&dt=${dateArray[0]}&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('.lblCard1').innerHTML = data.forecast.forecastday[0].date;
+      document.querySelector('.imgCard1').innerHTML = `<img src="${data.forecast.forecastday[0].day.condition.icon}" class="card-img-top" alt="..."></img>`;
+      document.querySelector('.lblHistoryText1').innerHTML = data.forecast.forecastday[0].day.condition.text;
+      document.querySelector('.lblHistoryMaxTemp1').innerHTML = data.forecast.forecastday[0].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.lblHistoryMinTemp1').innerHTML = data.forecast.forecastday[0].day.mintemp_c + `<sup> o</sup>C`;
+    })
+
+  fetch(`https://api.weatherapi.com/v1/history.json?q=${location}&dt=${dateArray[1]}&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('.lblCard2').innerHTML = data.forecast.forecastday[0].date;
+      document.querySelector('.imgCard2').innerHTML = `<img src="${data.forecast.forecastday[0].day.condition.icon}" class="card-img-top" alt="..."></img>`;
+      document.querySelector('.lblHistoryText2').innerHTML = data.forecast.forecastday[0].day.condition.text;
+      document.querySelector('.lblHistoryMaxTemp2').innerHTML = data.forecast.forecastday[0].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.lblHistoryMinTemp2').innerHTML = data.forecast.forecastday[0].day.mintemp_c + `<sup> o</sup>C`;
+    })
+
+  fetch(`https://api.weatherapi.com/v1/history.json?q=${location}&dt=${dateArray[2]}&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      document.querySelector('.lblCard3').innerHTML = data.forecast.forecastday[0].date;
+      document.querySelector('.imgCard3').innerHTML = `<img src="${data.forecast.forecastday[0].day.condition.icon}" class="card-img-top" alt="..."></img>`;
+      document.querySelector('.lblHistoryText3').innerHTML = data.forecast.forecastday[0].day.condition.text;
+      document.querySelector('.lblHistoryMaxTemp3').innerHTML = data.forecast.forecastday[0].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.lblHistoryMinTemp3').innerHTML = data.forecast.forecastday[0].day.mintemp_c + `<sup> o</sup>C`;
+    })
+}
+
+function forecastWeather(location) {
+  fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      document.querySelector('.raw1MaxTemp').innerHTML = data.forecast.forecastday[0].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw1Date').innerHTML = data.forecast.forecastday[0].date;
+      document.querySelector('.raw1MinTemp').innerHTML = data.forecast.forecastday[0].day.mintemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw1WindSpeed').innerHTML = data.forecast.forecastday[0].day.maxwind_mph + `mph`;
+      document.querySelector('.raw1Humidity').innerHTML = data.forecast.forecastday[0].day.avghumidity + `%`;
+    })
+
+  fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      document.querySelector('.raw2MaxTemp').innerHTML = data.forecast.forecastday[1].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw2Date').innerHTML = data.forecast.forecastday[1].date;
+      document.querySelector('.raw2MinTemp').innerHTML = data.forecast.forecastday[1].day.mintemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw2WindSpeed').innerHTML = data.forecast.forecastday[1].day.maxwind_mph + `mph`;
+      document.querySelector('.raw2Humidity').innerHTML = data.forecast.forecastday[1].day.avghumidity + `%`;
+    })
+
+  fetch(`https://api.weatherapi.com/v1/forecast.json?q=${location}&days=3&key=be613ef740984fda9ae155111231909`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      document.querySelector('.raw3MaxTemp').innerHTML = data.forecast.forecastday[2].day.maxtemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw3Date').innerHTML = data.forecast.forecastday[2].date;
+      document.querySelector('.raw3MinTemp').innerHTML = data.forecast.forecastday[2].day.mintemp_c + `<sup> o</sup>C`;
+      document.querySelector('.raw3WindSpeed').innerHTML = data.forecast.forecastday[2].day.maxwind_mph + `mph`;
+      document.querySelector('.raw3Humidity').innerHTML = data.forecast.forecastday[2].day.avghumidity + `%`;
+    })
+
+
 }
