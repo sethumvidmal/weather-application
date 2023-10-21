@@ -1,6 +1,5 @@
 body {
-    /*background: url("../assets/peakpx.jpg");*/
-    background: blue;
+    background: url("../assets/peakpx.jpg");
     background-attachment: fixed;
     background-size: cover;
     margin-top: 0;
@@ -17,7 +16,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1;
-    background: linear-gradient(87deg, rgba(0, 0, 0, 0.33), rgb(255 255 255 / 51%));
+    background: linear-gradient(87deg, rgba(0, 0, 0, 0.562), rgba(255, 255, 255, 0.627));
     padding: 1em;
 }
 
@@ -82,7 +81,6 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 255, 255, 0.24);
     margin-top: 1em ;
     margin-bottom: 1em;
 }
@@ -99,7 +97,7 @@ body {
     font-family: cursive;
     font-weight: 1000;
     font-size: 3rem;
-    color: rgb(99, 99, 99);
+    color: aliceblue;
     margin: 0;
 }
 
@@ -107,7 +105,7 @@ body {
     font-size: 1.5rem;
     font-family: cursive;
     font-weight: 500;
-    color: rgb(99, 99, 99);
+    color: aliceblue;
     grid-column: span 2;
     margin: 0;
 }
@@ -228,5 +226,5 @@ td{width:30em;}
     font-weight: 300; 
 }
 .footer-wrapper{background:linear-gradient(45deg, transparent, black);padding: 1em 2em;font-family: monospace;}
-.credit{font-size: 1rem;text-align: end;color: cyan;margin: 0;}
+.credit{font-size: 1rem;text-align: end;color: aliceblue;margin: 0;}
 
