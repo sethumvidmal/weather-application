@@ -2,13 +2,22 @@ body {
     background: url("../assets/peakpx.jpg");
     background-attachment: fixed;
     background-size: cover;
-
+    margin-top: 0;
+    max-width: 100%;
+    min-width: 780px;
 }
-
 .city-search-mode {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(87deg, rgba(0, 0, 0, 0.562), rgba(255, 255, 255, 0.627));
+    padding: 1em;
 }
 
 .lblLocation {
@@ -72,23 +81,33 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 1em ;
+    margin-bottom: 1em;
 }
+.temp-wrapper{
+    display: grid;
+    grid-template-columns: 5em 8em;
+    justify-content: center;
+    align-items: start;
+    justify-items: end;
+    grid-auto-rows: 5em;
 
+}
 .currentTemp {
     font-family: cursive;
     font-weight: 1000;
     font-size: 3rem;
-    color: rgb(99, 99, 99);
+    color: aliceblue;
+    margin: 0;
 }
 
 .currentState {
-    position: relative;
-    bottom: -10vh;
-    left: -15vh;
     font-size: 1.5rem;
     font-family: cursive;
     font-weight: 500;
-    color: rgb(99, 99, 99);
+    color: aliceblue;
+    grid-column: span 2;
+    margin: 0;
 }
 
 .verticalLine {
@@ -101,13 +120,11 @@ body {
 }
 
 .tblDetails {
-    padding: 40px;
+    padding: 1.5em 0;
     color: rgb(99, 99, 99);
-    font-size: 5vh;
     font-family: cursive;
-    font-weight: 600;
 }
-
+td{width:30em;}
 .weatherStatus {
     font-size: large;
 }
@@ -118,10 +135,12 @@ body {
 
 .tblContainer {
     background-color: rgba(240, 248, 255, 0.516);
-    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
-    border-radius: 30px;
+    box-shadow: 12px 11px 15px 0px rgba(0, 0, 0, 0.33);
+    border-radius: 2em;
+    margin: 2em 2.5em;
+    padding: 3em;
 }
-
+.history-wrapper{margin: 3em auto;}
 .lblHistory {
     font-family: cursive;
     font-weight: 1000;
@@ -131,21 +150,19 @@ body {
 
 .historyDetailsContainer {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
 .historyDetails {
     display: flex;
     justify-content: center;
-    width: 18rem;
-    height: 23rem;
+    width: 18em;
+    height: auto;
     padding: 20px;
     border-radius: 30px;
     background-color: rgba(240, 248, 255, 0.516);
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .lblFuture {
@@ -159,9 +176,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 5vw;
-    width: 90vw;
-    height: 80vh;
     border-radius: 20px;
     background-color: rgba(240, 248, 255, 0.516);
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
@@ -173,19 +187,19 @@ body {
     margin-right: 15px;
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.33);
 }
-
+.card-custom{width:30% ;}
+.forecast-wrapper{margin: 3em auto;}
 .lblFutureDetals {
     padding: 20px;
-    padding-right: 50px;
     font-family: cursive;
     font-size: larger;
     color: rgb(99, 99, 99);
 }
 
 .tblFuture {
-    width: 90%;
     height: 91%;
-    margin: 10px;
+    margin: 2%;
+    margin-bottom: 5%;
 
 }
 
@@ -193,24 +207,13 @@ body {
     border-bottom: 3px solid rgb(255, 255, 255);
     text-align: center;
 }
-.lblCard1{
+.lblCard-style{
     font-family: cursive;
     font-size: larger;
     color: rgb(99, 99, 99);
     font-weight: 600;
 }
-.lblCard2{
-    font-family: cursive;
-    font-size: larger;
-    color: rgb(99, 99, 99);
-    font-weight: 600;
-}
-.lblCard3{
-    font-family: cursive;
-    font-size: larger;
-    color: rgb(99, 99, 99);
-    font-weight: 600;
-}
+
 .historyTableDetails{
     font-family: cursive;
     font-size: large;
@@ -223,3 +226,6 @@ body {
     color: rgb(99, 99, 99);
     font-weight: 300; 
 }
+.footer-wrapper{background:linear-gradient(45deg, transparent, black);padding: 1em 2em;font-family: monospace;}
+.credit{font-size: 1rem;text-align: end;color: aliceblue;margin: 0;}
+
