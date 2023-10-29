@@ -1,4 +1,4 @@
-# WeatherSwift
+# WeatherSwift ☀️
 
 This is a web application that provides location-based weather information. Users can input the name of a city to retrieve the current weather details, a three-day weather forecast, and information on past weather conditions for the previous three days.
 
