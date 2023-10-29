@@ -25,7 +25,7 @@ You can access the live demo of this application [here](https://sethumvidmal.git
 - HTML
 - CSS
 - JavaScript
-- Weather API (Provide the name of the API or service used for weather data)
+- [Weather API](https://www.weatherapi.com/)
 
 ## Screenshots
 
