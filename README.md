@@ -17,7 +17,7 @@ You can access the live demo of this application [here](https://sethumvidmal.git
 
 1. Open the application using the provided link.
 2. Enter the name of the city for which you want to check the weather.
-3. Click the "Search" or "Submit" button.
+3. Click the 🔍 button.
 4. View the current weather details, three-day forecast, and past weather information.
 
 ## Technologies Used
