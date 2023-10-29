@@ -27,9 +27,7 @@ You can access the live demo of this application [here](https://sethumvidmal.git
 - JavaScript
 - [Weather API](https://www.weatherapi.com/)
 
-## Screenshots
 
-(Include screenshots of your application to give users a visual preview of the interface)
 
 ## How to Run Locally
 
